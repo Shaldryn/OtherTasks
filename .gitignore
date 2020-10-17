@@ -1,8 +1,8 @@
 # Compiled class file
 *.class
 
-//# file git
-//*.gitignore
+# file git
+*.gitignore
 
 # Log file
 *.log
