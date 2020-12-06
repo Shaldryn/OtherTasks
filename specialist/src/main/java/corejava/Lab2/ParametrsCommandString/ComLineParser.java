@@ -1,4 +1,4 @@
-package Lab2.ParametrsCommandString;
+package corejava.Lab2.ParametrsCommandString;
 
 /*
 Задача состоит в написании класса, который разбирает командную строку, переданную на вход программе.

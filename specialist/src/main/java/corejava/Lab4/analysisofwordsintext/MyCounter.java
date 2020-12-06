@@ -1,4 +1,4 @@
-package Lab4.analysisofwordsintext;
+package corejava.Lab4.analysisofwordsintext;
 
 import java.io.IOException;
 import java.util.Enumeration;

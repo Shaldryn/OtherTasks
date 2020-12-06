@@ -1,4 +1,4 @@
-package Lesson5.publisherSubscriber;
+package corejava.Lesson5.publisherSubscriber;
 
 import java.io.IOException;
 import java.nio.file.*;

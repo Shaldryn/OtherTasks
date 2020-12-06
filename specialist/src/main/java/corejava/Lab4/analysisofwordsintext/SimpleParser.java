@@ -1,4 +1,4 @@
-package Lab4.analysisofwordsintext;
+package corejava.Lab4.analysisofwordsintext;
 
 public class SimpleParser extends ComLineParserBase {
     private String inFile;

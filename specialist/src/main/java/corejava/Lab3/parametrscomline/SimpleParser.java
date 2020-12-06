@@ -1,4 +1,4 @@
-package Lab3.parametrscomline;
+package corejava.Lab3.parametrscomline;
 
 public class SimpleParser extends ComLineParserBase {
 

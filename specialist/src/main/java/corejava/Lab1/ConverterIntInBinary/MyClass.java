@@ -1,4 +1,4 @@
-package Lab1.ConverterIntInBinary;
+package corejava.Lab1.ConverterIntInBinary;
 
 public class MyClass {
 

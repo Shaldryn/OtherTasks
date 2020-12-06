@@ -1,7 +1,6 @@
-package Lab4.analysisofwordsintext;
+package corejava.Lab4.analysisofwordsintext;
 
 import java.io.*;
-import java.util.HashMap;
 import java.util.Hashtable;
 import java.util.StringTokenizer;
 

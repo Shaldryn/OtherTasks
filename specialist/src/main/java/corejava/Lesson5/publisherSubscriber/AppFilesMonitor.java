@@ -1,4 +1,4 @@
-package Lesson5.publisherSubscriber;
+package corejava.Lesson5.publisherSubscriber;
 
 public class AppFilesMonitor {
 
