@@ -7,7 +7,7 @@ class Data {
 
 class MyThread implements Runnable {
     private Data obj;
-    private final static Object monitor = new Object();
+//    private final static Object monitor = new Object();
 
     MyThread(Data d) {
         obj = d;
@@ -29,7 +29,8 @@ class MyThread implements Runnable {
 
     static void AddStatic() {
         try {
-            synchronized (monitor) {
+//            synchronized (monitor) {
+            synchronized (Data.class) {
                 Thread.sleep(5);
                 int n = Data.countSt;
                 n++;
