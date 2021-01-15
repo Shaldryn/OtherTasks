@@ -1,15 +1,12 @@
 package jdbc;
 
-import java.sql.Connection;
-import java.sql.Driver;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.Enumeration;
 
 public class JavaApp {
 
     public static final String DRIVER_NAME = "com.mysql.cj.jdbc.Driver";
-    public static final String CONN_STRING = "jdbc:mysql://localhost:3306/?user=root&password=root";
+    public static final String CONN_STRING = "jdbc:mysql://localhost:3306/?user=root&password=root&useLegacyDateTimeCode=false&serverTimezone=UTC";
 
     public static void main(String[] args) {
 
@@ -25,12 +22,26 @@ public class JavaApp {
             return;
         }
 
+        Connection conn = null;
         try {
-            Connection conn = DriverManager.getConnection(CONN_STRING);
+            conn = DriverManager.getConnection(CONN_STRING);
         } catch (SQLException ex) {
             System.out.println("Cannot open connection! " + ex.getMessage());
             return;
         }
 
+        try {
+            Statement st = conn.createStatement();
+//            st.executeUpdate("CREATE DATABASE db");
+            st.executeUpdate("USE db");
+//            st.executeUpdate("CREATE TABLE persons (name varchar(32), age int(3))");
+//            st.executeUpdate("INSERT INTO persons (name, age) VALUES ('Name4', 32)");
+            ResultSet rs = st.executeQuery("SELECT * FROM persons WHERE age=32 ORDER BY name");
+            while (rs.next()) {
+                System.out.println(rs.getString("name") + " - " + rs.getString("age"));
+            }
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+        }
     }
 }
